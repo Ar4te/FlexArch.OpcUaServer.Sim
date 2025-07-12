@@ -1,0 +1,71 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+/* 项目信息 */
+#define PROJECT_NAME "@PROJECT_NAME@"
+#define PROJECT_VERSION "@PROJECT_VERSION@"
+#define PROJECT_DESCRIPTION "@PROJECT_DESCRIPTION@"
+
+/* 版本信息 */
+#define VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define VERSION_PATCH @PROJECT_VERSION_PATCH@
+
+/* 编译时间 */
+#define BUILD_DATE __DATE__
+#define BUILD_TIME __TIME__
+
+/* 编译器信息 */
+#define CMAKE_C_COMPILER "@CMAKE_C_COMPILER@"
+#define CMAKE_BUILD_TYPE "@CMAKE_BUILD_TYPE@"
+
+/* 平台特定定义 */
+#cmakedefine WIN32
+#cmakedefine UNIX
+#cmakedefine APPLE
+
+/* 功能开关 */
+#cmakedefine ENABLE_DEBUG
+#cmakedefine ENABLE_LOGGING
+#cmakedefine ENABLE_SECURITY
+
+/* 默认配置 */
+#define DEFAULT_SERVER_PORT 4840
+#define DEFAULT_LOG_LEVEL 1  /* INFO */
+#define MAX_CLIENTS 10
+#define SIMULATION_INTERVAL_MS 1000
+
+/* 路径信息 */
+#define INSTALL_PREFIX "@CMAKE_INSTALL_PREFIX@"
+
+/* 版本字符串 */
+#define VERSION_STRING "@PROJECT_VERSION@"
+#define FULL_VERSION_STRING PROJECT_NAME " " VERSION_STRING " (built " BUILD_DATE " " BUILD_TIME ")"
+
+/* 函数声明 */
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* 获取版本信息的函数 */
+static inline const char* getVersionString(void) {
+    return VERSION_STRING;
+}
+
+static inline const char* getFullVersionString(void) {
+    return FULL_VERSION_STRING;
+}
+
+static inline const char* getProjectName(void) {
+    return PROJECT_NAME;
+}
+
+static inline const char* getProjectDescription(void) {
+    return PROJECT_DESCRIPTION;
+}
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* CONFIG_H */ 

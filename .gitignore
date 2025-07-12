@@ -1,0 +1,87 @@
+# 构建目录
+build/
+Debug/
+Release/
+out/
+
+# CMake生成的文件
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# 可执行文件
+opcua_server
+opcua_server.exe
+server
+server.exe
+
+# 编译生成的文件
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# 配置文件
+config.h
+
+# 日志文件
+*.log
+*.txt
+
+# 临时文件
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# IDE相关文件
+.vscode/
+.vs/
+*.vcxproj*
+*.sln
+*.user
+*.suo
+*.ncb
+*.aps
+*.clw
+*.tags
+
+# Clang相关
+.clang_complete
+compile_commands.json
+
+# 代码覆盖率
+*.gcno
+*.gcda
+*.gcov
+
+# 包文件
+*.tar.gz
+*.zip
+*.deb
+*.rpm
+*.dmg
+
+# 文档生成
+docs/html/
+docs/latex/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 包管理器
+conan.lock
+**/packages/
+
+# 备份文件
+*.bak
+*.backup
+*.orig 
