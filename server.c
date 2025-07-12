@@ -429,7 +429,7 @@ static UA_StatusCode calculateMethodCallback(UA_Server *server,
             UA_Variant_setScalar(&output[0], outputValue, &UA_TYPES[UA_TYPES_DOUBLE]);
         }
     }
-    
+    ///
     return UA_STATUSCODE_GOOD;
 }
 
