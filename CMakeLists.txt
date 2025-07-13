@@ -31,12 +31,12 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 # 源文件
 set(SOURCES
     server.c
-    open62541.c
+    ./includes/open62541.c
 )
 
 # 头文件
 set(HEADERS
-    open62541.h
+    ./includes/open62541.h
 )
 
 # 创建可执行文件
